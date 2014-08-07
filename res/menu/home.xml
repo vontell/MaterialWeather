@@ -3,8 +3,15 @@
     tools:context="io.github.vontell.materialweather.HomeActivity" >
 
     <item
+        android:id="@+id/action_edit"
+        android:orderInCategory="6"
+        android:showAsAction="never"
+        android:icon="@drawable/ic_action_edit"
+        android:title="@string/action_edit"/>
+    
+    <item
         android:id="@+id/action_refresh"
-        android:orderInCategory="1"
+        android:orderInCategory="5"
         android:showAsAction="always"
         android:icon="@drawable/ic_action_refresh"
         android:title="@string/action_refresh"/>

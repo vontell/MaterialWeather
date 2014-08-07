@@ -59,7 +59,7 @@ public class Weather {
 	 */
 	private void createUrl(String loc, int days){
 		
-		url = "api.worldweatheronline.com/free/v1/weather.ashx?";
+		url = "http://api.worldweatheronline.com/free/v1/weather.ashx?";
 		url += "q=" + loc;
 		url += "&format=json";
 		url += "&num_of_days=" + days;
