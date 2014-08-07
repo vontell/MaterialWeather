@@ -45,6 +45,9 @@ public class HomeActivity extends Activity {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		
+		//Set default location
+		location = "Los Angeles";
+		
 		//Loads the views into memory
 		temperature = (TextView) findViewById(R.id.degrees);
 		locationView = (TextView) findViewById(R.id.location);
