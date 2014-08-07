@@ -52,6 +52,8 @@ public class HomeActivity extends Activity {
 		temperature = (TextView) findViewById(R.id.degrees);
 		locationView = (TextView) findViewById(R.id.location);
 		
+		refresh();
+		
 	}
 
 	@Override
