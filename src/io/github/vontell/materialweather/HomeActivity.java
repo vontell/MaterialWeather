@@ -5,6 +5,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * The home page of the application, which will
+ * show some basic weather information and an
+ * icon.
+ * @author Aaron Vontell
+ * @version 0.1
+ */
 public class HomeActivity extends Activity {
 
 	@Override
