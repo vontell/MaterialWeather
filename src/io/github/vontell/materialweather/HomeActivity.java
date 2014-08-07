@@ -46,7 +46,7 @@ public class HomeActivity extends Activity {
 		StrictMode.setThreadPolicy(policy);
 		
 		//Set default location
-		location = "Los Angeles";
+		location = "London";
 		
 		//Loads the views into memory
 		temperature = (TextView) findViewById(R.id.degrees);
