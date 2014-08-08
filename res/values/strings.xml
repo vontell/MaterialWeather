@@ -10,10 +10,11 @@
     
     <string name="test_deg"></string>
     <string name="test_loc">Hartford, CT</string>
+    <string name="PREFS_KEY">io.github.vontell.materialweather.PREFS</string>
     
     <string name="weather_dialog_title">Refreshing Weather</string>
     <string name="weather_dialog_message">Downloading data...</string>
     <string name="edit_location_title">Change Location</string>
-    <string name="edit_location_message">Enter your location (City, ZIP, Long/Lat, etc...)</string>
+    <string name="edit_location_message">Enter your location (City, ZIP, etc...)</string>
 
 </resources>

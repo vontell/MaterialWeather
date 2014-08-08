@@ -46,6 +46,7 @@ public class Weather {
 		
 		createUrl(loc, days);
 		content = retrieveData();
+		
 		populateInfo();
 		
 		location = loc;
@@ -358,6 +359,20 @@ public class Weather {
 	 */
 	public void setPicID(int picID) {
 		this.picID = picID;
+	}
+
+	/**
+	 * @return the content
+	 */
+	public String getContent() {
+		return content;
+	}
+
+	/**
+	 * @param content the content to set
+	 */
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 }

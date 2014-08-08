@@ -14,6 +14,13 @@ public class PicturePicker {
 	
 	private Weather weather;
 	private Context appContext;
+	private int sunny;
+	private int cloudy;
+	private int mist;
+	private int rainy;
+	private int thunder;
+	private int snow;
+	private int sleet;
 	
 	public PicturePicker(Weather w, Context context){
 		

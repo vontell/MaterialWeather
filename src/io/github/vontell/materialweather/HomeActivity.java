@@ -7,7 +7,9 @@ import org.json.JSONException;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.Menu;
@@ -35,7 +37,9 @@ public class HomeActivity extends Activity {
 	//The user's location in string form
 	String location;
 	
-	//TODO: Save the json in shared prefs
+	//TODO: Save the location in shared prefs
+	SharedPreferences prefs;
+	SharedPreferences.Editor editor;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +49,12 @@ public class HomeActivity extends Activity {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		
+		prefs = getSharedPreferences(getResources().getString(R.string.PREFS_KEY),
+									 Context.MODE_PRIVATE);
+		editor = prefs.edit();
+		
 		//Set default location
-		location = "London";
+		location = prefs.getString("location", "London");
 		
 		//Loads the views into memory
 		temperature = (TextView) findViewById(R.id.degrees);
@@ -96,8 +104,14 @@ public class HomeActivity extends Activity {
 		locDialog.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
 		public void onClick(DialogInterface dialog, int whichButton) {
 		  String value = input.getText().toString();
-		  location = value;
-		  refresh();
+		  if(value.length() == 0 || value.contains(" ")){
+			  makeToast("Invalid Input");
+		  }
+		  else{
+			  location = value;
+			  editor.putString("location", value).commit();
+			  refresh();
+		  }
 		  }
 		});
 
@@ -126,6 +140,7 @@ public class HomeActivity extends Activity {
 		
 		try {
 			weather = new Weather(location, 1);
+			editor.putString("weatherContent", weather.getContent()).commit();
 			makeToast("Success!");
 			populate();
 		} catch (IOException e) {
