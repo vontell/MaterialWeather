@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        	android:key="button_weather_specific_key"
+        	android:title="@string/weather_preferences_title"
+        	android:persistent="false">
+        <PreferenceCategory 
+        	android:title="@string/display_weather_category"
+        	android:key="pref_key_storage_settings">
+        	<CheckBoxPreference
+            	android:key="pref_temp_f"
+            	android:title="@string/pref_temp_f_title"
+            	android:defaultValue="true" />
+        	<CheckBoxPreference
+            	android:key="pref_temp_c"
+            	android:title="@string/pref_temp_c_title"
+            	android:defaultValue="false" />
+        	<CheckBoxPreference
+            	android:key="pref_humidity"
+            	android:title="@string/pref_humidity_title"
+            	android:defaultValue="true" />
+        	<CheckBoxPreference
+            	android:key="pref_cloud"
+            	android:title="@string/pref_cloud_title"
+            	android:defaultValue="true" />
+        	<CheckBoxPreference
+            	android:key="pref_precip"
+            	android:title="@string/pref_precip_title"
+            	android:defaultValue="true" />
+        	<CheckBoxPreference
+            	android:key="pref_pressure"
+            	android:title="@string/pref_pressure_title"
+            	android:defaultValue="true" />
+        	<CheckBoxPreference
+            	android:key="pref_visibility"
+            	android:title="@string/pref_visibility_title"
+            	android:defaultValue="true" />
+        	<CheckBoxPreference
+            	android:key="pref_speed"
+            	android:title="@string/pref_speed_title"
+            	android:defaultValue="true" />
+        </PreferenceCategory>
+   	</PreferenceScreen>
+</PreferenceScreen>
