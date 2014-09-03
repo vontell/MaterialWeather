@@ -1,4 +1,5 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/background_dark">
     <PreferenceScreen
         	android:key="button_weather_specific_key"
         	android:title="@string/weather_preferences_title"
